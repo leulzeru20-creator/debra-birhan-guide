@@ -56,7 +56,6 @@ function HomePage() {
               width={1200}
               height={1408}
               className="aspect-[4/5] w-full rounded-sm object-cover shadow-xl"
-              priority={true}
             />
             <div className="absolute -bottom-6 -left-6 hidden max-w-[240px] bg-highland p-8 text-warm-bg md:block">
               <p className="text-sm italic leading-relaxed">
