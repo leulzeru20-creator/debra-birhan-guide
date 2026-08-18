@@ -32,18 +32,45 @@ function DiningPage() {
           </p>
         </div>
 
-        <div className="mb-16 grid gap-6 md:grid-cols-2">
+        <div className="mb-8 grid gap-6 md:grid-cols-2">
+          <img
+            src={restaurantHall.url}
+            alt="Getva Hotel restaurant with white chair covers and burgundy table linens"
+            loading="lazy"
+            className="aspect-[4/3] w-full rounded-sm object-cover"
+          />
+          <img
+            src={buffet.url}
+            alt="Breakfast buffet line with chafing dishes and bowls of salads and fruit"
+            loading="lazy"
+            className="aspect-[4/3] w-full rounded-sm object-cover"
+          />
+        </div>
+
+        <div className="mb-16 grid gap-6 md:grid-cols-4">
+          <img
+            src={pastaPlate.url}
+            alt="Spaghetti with meatballs, kofta and open sandwiches served at Getva Hotel"
+            loading="lazy"
+            className="aspect-square w-full rounded-sm object-cover"
+          />
+          <img
+            src={windowTable.url}
+            alt="Small red-clothed table for two by a large window at Getva Hotel"
+            loading="lazy"
+            className="aspect-square w-full rounded-sm object-cover"
+          />
           <img
             src={terrace.url}
             alt="Covered terrace dining area with tables and a woven mesob at Getva Hotel"
             loading="lazy"
-            className="aspect-[4/3] w-full rounded-sm object-cover"
+            className="aspect-square w-full rounded-sm object-cover"
           />
           <img
             src={bambooLounge.url}
             alt="Bamboo lounge with arched windows and woven chairs at Getva Hotel"
             loading="lazy"
-            className="aspect-[4/3] w-full rounded-sm object-cover"
+            className="aspect-square w-full rounded-sm object-cover"
           />
         </div>
 
