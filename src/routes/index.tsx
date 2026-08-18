@@ -52,7 +52,7 @@ function HomePage() {
           </div>
           <div className="relative">
             <img
-              src={hotelFront}
+              src={hotelFront.url}
               alt="The Getva Hotel building on Zerayakob Street in Debre Birhan under a bright highland sky"
               className="aspect-[4/5] w-full rounded-sm object-cover shadow-xl"
             />
@@ -106,7 +106,7 @@ function HomePage() {
         <div className="grid gap-6 md:grid-cols-3">
           <figure>
             <img
-              src={garden}
+              src={garden.url}
               alt="White wicker chairs and tables in the shaded garden at Getva Hotel"
               loading="lazy"
               className="aspect-[4/3] w-full rounded-sm object-cover"
@@ -117,7 +117,7 @@ function HomePage() {
           </figure>
           <figure>
             <img
-              src={bambooLounge}
+              src={bambooLounge.url}
               alt="Bamboo-clad lounge with arched windows and woven chairs at Getva Hotel"
               loading="lazy"
               className="aspect-[4/3] w-full rounded-sm object-cover"
@@ -128,7 +128,7 @@ function HomePage() {
           </figure>
           <figure>
             <img
-              src={terrace}
+              src={terrace.url}
               alt="Covered outdoor terrace with tables and a woven mesob at Getva Hotel"
               loading="lazy"
               className="aspect-[4/3] w-full rounded-sm object-cover"
@@ -158,7 +158,7 @@ function HomePage() {
         <div className="grid gap-10 md:grid-cols-2">
           <Link to="/rooms" className="group block">
             <img
-              src={guestRoom}
+              src={guestRoom.url}
               alt="Guest room bed at Getva Hotel made up with white linen and a gold runner"
               loading="lazy"
               className="mb-6 aspect-[4/3] w-full rounded-sm bg-stone-100 object-cover transition-transform duration-500 group-hover:scale-[1.02]"
@@ -177,7 +177,7 @@ function HomePage() {
 
           <Link to="/rooms" className="group block">
             <img
-              src={conference}
+              src={conference.url}
               alt="Long polished conference table with leather chairs and a projector screen at Getva Hotel"
               loading="lazy"
               className="mb-6 aspect-[4/3] w-full rounded-sm bg-stone-100 object-cover transition-transform duration-500 group-hover:scale-[1.02]"
