@@ -1,14 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import standardRoom from "@/assets/standard-room.jpg";
-import executiveSuite from "@/assets/executive-suite.jpg";
+import guestRoom from "@/assets/getva-hotel_1.jpg.asset.json";
+import conference from "@/assets/enourmous-conference.jpg.asset.json";
 
 export const Route = createFileRoute("/rooms")({
   head: () => ({
     meta: [
-      { title: "Rooms & Suites — Getva Hotel" },
-      { name: "description", content: "Comfortable rooms and suites at Getva Hotel in Debre Birhan. Standard Highland Rooms and Executive Suites with modern amenities and mountain views." },
-      { property: "og:title", content: "Rooms & Suites — Getva Hotel" },
-      { property: "og:description", content: "Comfortable rooms and suites at Getva Hotel in Debre Birhan. Standard Highland Rooms and Executive Suites with modern amenities and mountain views." },
+      { title: "Rooms & Meeting Space — Getva Hotel" },
+      { name: "description", content: "Standard and executive rooms at Getva Hotel in Debre Birhan, plus a large conference hall for meetings and training." },
+      { property: "og:title", content: "Rooms & Meeting Space — Getva Hotel" },
+      { property: "og:description", content: "Standard and executive rooms at Getva Hotel in Debre Birhan, plus a large conference hall for meetings and training." },
+      { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
@@ -18,22 +19,34 @@ export const Route = createFileRoute("/rooms")({
 function RoomsPage() {
   const rooms = [
     {
-      name: "Standard Highland Room",
-      description: "Perfect for solo travelers and couples seeking comfort and value. Each room features a queen bed, traditional woven accents, and mountain views.",
+      name: "Standard Room",
+      description:
+        "A wide bed with fresh white linen, a wardrobe, and a bathroom with reliable hot water. Simple, clean, and quiet enough to sleep off a long drive.",
       price: "From $45 / night",
       note: "Breakfast included",
-      image: standardRoom,
-      alt: "Standard Highland Room at Getva Hotel with traditional textiles and mountain view",
-      features: ["Queen bed", "En-suite bathroom", "Free WiFi", "Flat-screen TV"],
+      image: guestRoom,
+      alt: "Standard room bed at Getva Hotel made up with white linen and a gold runner",
+      features: ["Wide double bed", "Hot-water bathroom", "WiFi", "Flat-screen TV"],
     },
     {
-      name: "Executive Suite",
-      description: "Spacious suite with a separate work area, lounge space, and panoramic highland views. Ideal for business travelers or extended stays.",
+      name: "Executive Room",
+      description:
+        "The same bed, with more floor space and a desk that fits a laptop and papers. The better pick if you're here to work for a few days.",
       price: "From $75 / night",
-      note: "Premium Wi-Fi included",
-      image: executiveSuite,
-      alt: "Executive Suite at Getva Hotel with work desk and mountain view",
-      features: ["King bed", "Work desk", "Lounge area", "Premium WiFi"],
+      note: "Desk and seating area",
+      image: guestRoom,
+      alt: "Executive room at Getva Hotel with a large bed and seating area",
+      features: ["Extra space", "Work desk", "Seating area", "WiFi"],
+    },
+    {
+      name: "Conference Hall",
+      description:
+        "A long boardroom table with leather chairs for 40 or more, a projector screen, sound, and power at every seat. Coffee breaks and lunch can be served from our kitchen.",
+      price: "Day rates on request",
+      note: "Catering available",
+      image: conference,
+      alt: "Long polished conference table with leather chairs and a projector screen at Getva Hotel",
+      features: ["40+ seats", "Projector & screen", "Power at each seat", "Catering on site"],
     },
   ];
 
@@ -42,9 +55,9 @@ function RoomsPage() {
       <div className="section-container py-16 md:py-24">
         <div className="mb-12 max-w-2xl">
           <span className="text-label mb-4 block text-clay">Stay with us</span>
-          <h1 className="mb-4 text-4xl text-earth md:text-5xl">Rooms & Suites</h1>
+          <h1 className="mb-4 text-4xl text-earth md:text-5xl">Rooms & Meeting Space</h1>
           <p className="text-lg text-earth/70">
-            Clean, comfortable rooms designed for rest and relaxation in the Ethiopian highlands. All rooms include complimentary breakfast and WiFi.
+            Straightforward rooms at fair prices, and a hall big enough for the whole department. Breakfast and WiFi come with every room.
           </p>
         </div>
 
@@ -58,8 +71,6 @@ function RoomsPage() {
                 <img
                   src={room.image}
                   alt={room.alt}
-                  width={944}
-                  height={704}
                   loading="lazy"
                   className="aspect-[4/3] w-full rounded-sm object-cover shadow-lg"
                 />
@@ -80,7 +91,7 @@ function RoomsPage() {
                   <p className="text-label text-earth/40">{room.note}</p>
                 </div>
                 <Link to="/contact" className="btn-primary">
-                  Book this Room
+                  Enquire
                 </Link>
               </div>
             </div>
