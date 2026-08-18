@@ -5,6 +5,9 @@ import garden from "@/assets/caption_1.jpg.asset.json";
 import bambooLounge from "@/assets/caption_2.jpg.asset.json";
 import terrace from "@/assets/caption.jpg.asset.json";
 import conference from "@/assets/enourmous-conference.jpg.asset.json";
+import lobby from "@/assets/lobby.jpg.asset.json";
+import hotelNight from "@/assets/hotel-night.jpg.asset.json";
+import eventHall from "@/assets/event-hall.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
