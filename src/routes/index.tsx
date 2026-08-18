@@ -140,6 +140,39 @@ function HomePage() {
               Covered terrace dining, rain or shine.
             </figcaption>
           </figure>
+          <figure>
+            <img
+              src={lobby.url}
+              alt="Getva Hotel lobby with tiled floor, plants and low armchairs under coloured lighting"
+              loading="lazy"
+              className="aspect-[4/3] w-full rounded-sm object-cover"
+            />
+            <figcaption className="mt-3 text-sm text-earth/60">
+              The lobby — check in, then sit a minute.
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src={eventHall.url}
+              alt="Large hall at Getva Hotel set with rows of red and gold banquet chairs"
+              loading="lazy"
+              className="aspect-[4/3] w-full rounded-sm object-cover"
+            />
+            <figcaption className="mt-3 text-sm text-earth/60">
+              The big hall, ready for a hundred people.
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src={hotelNight.url}
+              alt="Getva Hotel at night with its lit rooftop sign in Debre Birhan"
+              loading="lazy"
+              className="aspect-[4/3] w-full rounded-sm object-cover"
+            />
+            <figcaption className="mt-3 text-sm text-earth/60">
+              Easy to spot after dark — just follow the sign.
+            </figcaption>
+          </figure>
         </div>
       </section>
 
