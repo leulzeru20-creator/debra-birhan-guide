@@ -120,6 +120,22 @@ function DiningPage() {
           </div>
         </div>
 
+        <div className="mt-16 grid items-center gap-10 lg:grid-cols-2">
+          <img
+            src={bar.url}
+            alt="The lit bar at Getva Hotel with bottles on glass shelves and low tables"
+            loading="lazy"
+            className="aspect-[4/3] w-full rounded-sm object-cover"
+          />
+          <div>
+            <div className="mb-6 h-px w-12 bg-clay"></div>
+            <h2 className="mb-4 text-2xl text-earth">The Bar</h2>
+            <p className="text-earth/70">
+              A quiet drink after the drive, or a longer evening with the billiards table next door. Local beer, spirits, soft drinks and coffee — open late enough for anyone arriving off the Addis road.
+            </p>
+          </div>
+        </div>
+
         <div className="mt-16 bg-earth p-8 text-warm-bg md:p-12">
           <div className="grid gap-8 md:grid-cols-3">
             <div className="text-center">
