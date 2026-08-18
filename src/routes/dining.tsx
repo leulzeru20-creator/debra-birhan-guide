@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import terrace from "@/assets/caption.jpg.asset.json";
+import bambooLounge from "@/assets/caption_2.jpg.asset.json";
 
 export const Route = createFileRoute("/dining")({
   head: () => ({
@@ -17,12 +19,27 @@ function DiningPage() {
   return (
     <div className="min-h-screen bg-warm-bg">
       <div className="section-container py-16 md:py-24">
-        <div className="mb-16 max-w-2xl">
+        <div className="mb-10 max-w-2xl">
           <span className="text-label mb-4 block text-clay">Taste the Highlands</span>
           <h1 className="mb-4 text-4xl text-earth md:text-5xl">Dining at Getva</h1>
           <p className="text-lg text-earth/70">
-            From freshly prepared Ethiopian classics to familiar international favorites, our kitchen serves generous meals made with local ingredients and highland hospitality.
+            Injera and wot cooked the way it should be, plus pasta, eggs and grills when you want something familiar. Eat inside, under the terrace roof, or out in the garden.
           </p>
+        </div>
+
+        <div className="mb-16 grid gap-6 md:grid-cols-2">
+          <img
+            src={terrace.url}
+            alt="Covered terrace dining area with tables and a woven mesob at Getva Hotel"
+            loading="lazy"
+            className="aspect-[4/3] w-full rounded-sm object-cover"
+          />
+          <img
+            src={bambooLounge.url}
+            alt="Bamboo lounge with arched windows and woven chairs at Getva Hotel"
+            loading="lazy"
+            className="aspect-[4/3] w-full rounded-sm object-cover"
+          />
         </div>
 
         <div className="grid gap-12 lg:grid-cols-2">

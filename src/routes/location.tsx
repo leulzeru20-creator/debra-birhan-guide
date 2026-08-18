@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import hotelFront from "@/assets/getva-hotel.jpg.asset.json";
 
 export const Route = createFileRoute("/location")({
   head: () => ({
@@ -17,13 +18,20 @@ function LocationPage() {
   return (
     <div className="min-h-screen bg-warm-bg">
       <div className="section-container py-16 md:py-24">
-        <div className="mb-16 max-w-2xl">
+        <div className="mb-10 max-w-2xl">
           <span className="text-label mb-4 block text-clay">Find Us</span>
           <h1 className="mb-4 text-4xl text-earth md:text-5xl">Location</h1>
           <p className="text-lg text-earth/70">
-            Set in the historic town of Debre Birhan, Getva Hotel is easy to reach from Addis Ababa and serves as a gateway to the surrounding highlands and heritage sites.
+            Look for the red "Getva Hotel" sign on the roof, just off Zerayakob Street. Roughly three hours from Addis, with free parking inside the gate.
           </p>
         </div>
+
+        <img
+          src={hotelFront.url}
+          alt="The Getva Hotel building in Debre Birhan with its red rooftop sign"
+          loading="lazy"
+          className="mb-16 aspect-[16/9] w-full rounded-sm object-cover"
+        />
 
         <div className="grid gap-12 lg:grid-cols-2">
           <div className="border border-earth/10 bg-white p-8 md:p-12">
