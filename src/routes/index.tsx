@@ -100,7 +100,7 @@ function HomePage() {
         <div className="mb-12 max-w-xl">
           <h2 className="text-4xl text-earth">Around the hotel</h2>
           <p className="mt-2 text-earth/60">
-            No stock photos — this is what you'll walk into.
+            {"\n"}
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
