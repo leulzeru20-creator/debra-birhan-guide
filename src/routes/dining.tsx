@@ -1,6 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import terrace from "@/assets/caption.jpg.asset.json";
 import bambooLounge from "@/assets/caption_2.jpg.asset.json";
+import restaurantHall from "@/assets/restaurant-hall.jpg.asset.json";
+import buffet from "@/assets/breakfast-buffet.jpg.asset.json";
+import pastaPlate from "@/assets/pasta-plate.jpg.asset.json";
+import windowTable from "@/assets/window-table.jpg.asset.json";
+import bar from "@/assets/bar.jpg.asset.json";
 
 export const Route = createFileRoute("/dining")({
   head: () => ({
@@ -27,18 +32,45 @@ function DiningPage() {
           </p>
         </div>
 
-        <div className="mb-16 grid gap-6 md:grid-cols-2">
+        <div className="mb-8 grid gap-6 md:grid-cols-2">
+          <img
+            src={restaurantHall.url}
+            alt="Getva Hotel restaurant with white chair covers and burgundy table linens"
+            loading="lazy"
+            className="aspect-[4/3] w-full rounded-sm object-cover"
+          />
+          <img
+            src={buffet.url}
+            alt="Breakfast buffet line with chafing dishes and bowls of salads and fruit"
+            loading="lazy"
+            className="aspect-[4/3] w-full rounded-sm object-cover"
+          />
+        </div>
+
+        <div className="mb-16 grid gap-6 md:grid-cols-4">
+          <img
+            src={pastaPlate.url}
+            alt="Spaghetti with meatballs, kofta and open sandwiches served at Getva Hotel"
+            loading="lazy"
+            className="aspect-square w-full rounded-sm object-cover"
+          />
+          <img
+            src={windowTable.url}
+            alt="Small red-clothed table for two by a large window at Getva Hotel"
+            loading="lazy"
+            className="aspect-square w-full rounded-sm object-cover"
+          />
           <img
             src={terrace.url}
             alt="Covered terrace dining area with tables and a woven mesob at Getva Hotel"
             loading="lazy"
-            className="aspect-[4/3] w-full rounded-sm object-cover"
+            className="aspect-square w-full rounded-sm object-cover"
           />
           <img
             src={bambooLounge.url}
             alt="Bamboo lounge with arched windows and woven chairs at Getva Hotel"
             loading="lazy"
-            className="aspect-[4/3] w-full rounded-sm object-cover"
+            className="aspect-square w-full rounded-sm object-cover"
           />
         </div>
 
@@ -85,6 +117,22 @@ function DiningPage() {
                 <span>Bar and lounge service available</span>
               </li>
             </ul>
+          </div>
+        </div>
+
+        <div className="mt-16 grid items-center gap-10 lg:grid-cols-2">
+          <img
+            src={bar.url}
+            alt="The lit bar at Getva Hotel with bottles on glass shelves and low tables"
+            loading="lazy"
+            className="aspect-[4/3] w-full rounded-sm object-cover"
+          />
+          <div>
+            <div className="mb-6 h-px w-12 bg-clay"></div>
+            <h2 className="mb-4 text-2xl text-earth">The Bar</h2>
+            <p className="text-earth/70">
+              A quiet drink after the drive, or a longer evening with the billiards table next door. Local beer, spirits, soft drinks and coffee — open late enough for anyone arriving off the Addis road.
+            </p>
           </div>
         </div>
 

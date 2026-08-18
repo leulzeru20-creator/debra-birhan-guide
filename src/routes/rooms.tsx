@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import guestRoom from "@/assets/getva-hotel_1.jpg.asset.json";
 import conference from "@/assets/enourmous-conference.jpg.asset.json";
+import eventHall from "@/assets/event-hall.jpg.asset.json";
+import ankoberHall from "@/assets/ankober-hall.jpg.asset.json";
 
 export const Route = createFileRoute("/rooms")({
   head: () => ({
@@ -96,6 +98,44 @@ function RoomsPage() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-24">
+          <div className="mb-10 max-w-2xl">
+            <h2 className="mb-3 text-3xl text-earth">Halls for bigger days</h2>
+            <p className="text-earth/70">
+              Weddings, graduations, trainings and workshops. We set the room the way you need it — theatre rows for a hundred or more, or round tables with the stage dressed for a wedding.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            <figure>
+              <img
+                src={eventHall.url}
+                alt="Large hall at Getva Hotel set with rows of red and gold banquet chairs facing a stage"
+                loading="lazy"
+                className="aspect-[16/10] w-full rounded-sm object-cover"
+              />
+              <figcaption className="mt-3 text-sm text-earth/60">
+                Theatre seating for conferences and graduations.
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src={ankoberHall.url}
+                alt="Ankober Hall at Getva Hotel decorated for a wedding with blue drapes and a flower archway"
+                loading="lazy"
+                className="aspect-[16/10] w-full rounded-sm object-cover"
+              />
+              <figcaption className="mt-3 text-sm text-earth/60">
+                Ankober Hall, dressed for a wedding.
+              </figcaption>
+            </figure>
+          </div>
+          <div className="mt-8">
+            <Link to="/contact" className="btn-primary">
+              Ask about hall bookings
+            </Link>
+          </div>
         </div>
       </div>
     </div>
