@@ -24,7 +24,7 @@ function NotFoundComponent() {
         <div className="mt-6">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="btn-primary"
           >
             Go home
           </Link>
@@ -56,13 +56,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
               router.invalidate();
               reset();
             }}
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="btn-primary"
           >
             Try again
           </button>
           <a
             href="/"
-            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+            className="inline-flex items-center justify-center border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
           >
             Go home
           </a>
@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Getva Hotel — Debre Birhan, Ethiopia" },
+      { name: "description", content: "Warm hospitality in the Ethiopian highlands. Budget-friendly rooms, dining, and amenities in Debre Birhan." },
+      { name: "author", content: "Getva Hotel" },
+      { property: "og:title", content: "Getva Hotel — Debre Birhan, Ethiopia" },
+      { property: "og:description", content: "Warm hospitality in the Ethiopian highlands. Budget-friendly rooms, dining, and amenities in Debre Birhan." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@GetvaHotel" },
     ],
     links: [
       {
@@ -92,6 +92,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Inter:wght@300;400;500;600&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -114,13 +127,121 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+function Header() {
+  return (
+    <nav className="sticky top-0 z-50 flex items-center justify-between border-b border-earth/10 bg-warm-bg/50 px-8 py-6 backdrop-blur-md">
+      <Link
+        to="/"
+        className="font-serif text-2xl font-semibold tracking-tight text-clay"
+      >
+        GETVA HOTEL
+      </Link>
+      <div className="hidden items-center gap-8 text-sm font-medium uppercase tracking-wider md:flex">
+        <Link
+          to="/rooms"
+          activeProps={{ className: "text-clay" }}
+          className="text-earth transition-colors hover:text-clay"
+        >
+          Rooms
+        </Link>
+        <Link
+          to="/dining"
+          activeProps={{ className: "text-clay" }}
+          className="text-earth transition-colors hover:text-clay"
+        >
+          Dining
+        </Link>
+        <Link
+          to="/location"
+          activeProps={{ className: "text-clay" }}
+          className="text-earth transition-colors hover:text-clay"
+        >
+          Location
+        </Link>
+        <Link
+          to="/contact"
+          activeProps={{ className: "text-clay" }}
+          className="text-earth transition-colors hover:text-clay"
+        >
+          Contact
+        </Link>
+      </div>
+      <Link
+        to="/contact"
+        className="btn-secondary text-sm"
+      >
+        Book a Room
+      </Link>
+    </nav>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="bg-earth px-8 py-16 text-warm-bg/60">
+      <div className="section-container grid gap-12 md:grid-cols-4">
+        <div className="md:col-span-2">
+          <div className="mb-6 font-serif text-2xl font-semibold text-warm-bg">
+            GETVA HOTEL
+          </div>
+          <p className="max-w-sm text-sm leading-relaxed">
+            Located in the historical heart of Debre Birhan, Getva Hotel offers a unique blend of highland culture and modern convenience.
+          </p>
+        </div>
+        <div>
+          <h5 className="mb-6 text-xs font-bold uppercase tracking-widest text-warm-bg">
+            Contact
+          </h5>
+          <ul className="space-y-4 text-sm">
+            <li>Zerayakob Street, Debre Birhan</li>
+            <li>Amhara Region, Ethiopia</li>
+            <li>+251 911 000 000</li>
+            <li>stay@getvahotel.com</li>
+          </ul>
+        </div>
+        <div>
+          <h5 className="mb-6 text-xs font-bold uppercase tracking-widest text-warm-bg">
+            Follow
+          </h5>
+          <ul className="space-y-4 text-sm">
+            <li>
+              <a href="#" className="transition-colors hover:text-clay">
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a href="#" className="transition-colors hover:text-clay">
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a href="#" className="transition-colors hover:text-clay">
+                Tripadvisor
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="section-container mt-16 flex flex-col justify-between gap-4 border-t border-warm-bg/10 pt-8 text-[10px] uppercase tracking-widest sm:flex-row">
+        <p>© 2026 Getva Hotel. All Rights Reserved.</p>
+        <p>Designed for Debre Birhan</p>
+      </div>
+    </footer>
+  );
+}
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <div className="flex min-h-screen flex-col">
+        <Header />
+        <main className="flex-1">
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
     </QueryClientProvider>
   );
 }
