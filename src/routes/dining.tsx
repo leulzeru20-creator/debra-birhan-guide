@@ -1,6 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import terrace from "@/assets/caption.jpg.asset.json";
 import bambooLounge from "@/assets/caption_2.jpg.asset.json";
+import restaurantHall from "@/assets/restaurant-hall.jpg.asset.json";
+import buffet from "@/assets/breakfast-buffet.jpg.asset.json";
+import pastaPlate from "@/assets/pasta-plate.jpg.asset.json";
+import windowTable from "@/assets/window-table.jpg.asset.json";
+import bar from "@/assets/bar.jpg.asset.json";
 
 export const Route = createFileRoute("/dining")({
   head: () => ({
