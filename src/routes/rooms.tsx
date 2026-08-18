@@ -79,9 +79,9 @@ function RoomsPage() {
                   <p className="text-xl font-semibold text-clay">{room.price}</p>
                   <p className="text-label text-earth/40">{room.note}</p>
                 </div>
-                <a href="/contact" className="btn-primary">
+                <Link to="/contact" className="btn-primary">
                   Book this Room
-                </a>
+                </Link>
               </div>
             </div>
           ))}
