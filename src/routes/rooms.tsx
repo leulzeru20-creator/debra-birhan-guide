@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import guestRoom from "@/assets/getva-hotel_1.jpg.asset.json";
 import conference from "@/assets/enourmous-conference.jpg.asset.json";
+import eventHall from "@/assets/event-hall.jpg.asset.json";
+import ankoberHall from "@/assets/ankober-hall.jpg.asset.json";
 
 export const Route = createFileRoute("/rooms")({
   head: () => ({
