@@ -45,8 +45,8 @@ export function BookingForm({
   prefill,
   onDone,
 }: {
-  prefill?: Prefill;
-  onDone?: () => void;
+  prefill?: Prefill | undefined;
+  onDone?: (() => void) | undefined;
 }) {
   const send = useServerFn(sendBookingRequest);
   const [submitting, setSubmitting] = useState(false);
