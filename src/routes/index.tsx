@@ -40,19 +40,7 @@ function HomePage() {
             <p className="mb-8 max-w-md text-lg leading-relaxed text-earth/70">
               You've been on the road from Addis for three hours. Park for free, drop your bag, take a hot shower, and eat something warm in the garden. That's Getva.
             </p>
-            <div className="flex flex-col gap-4 sm:flex-row">
-              <div className="flex-1 border border-earth/20 bg-white/50 p-4">
-                <label className="text-label mb-1 block text-earth/50">Check In</label>
-                <span className="text-sm font-medium">Aug 19, 2026</span>
-              </div>
-              <div className="flex-1 border border-earth/20 bg-white/50 p-4">
-                <label className="text-label mb-1 block text-earth/50">Check Out</label>
-                <span className="text-sm font-medium">Aug 20, 2026</span>
-              </div>
-              <Link to="/contact" className="btn-primary flex-shrink-0">
-                Ask About a Room
-              </Link>
-            </div>
+            <HeroBookingWidget />
           </div>
           <div className="relative">
             <img
