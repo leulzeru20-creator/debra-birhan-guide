@@ -174,6 +174,17 @@ function HomePage() {
               Easy to spot after dark — just follow the sign.
             </figcaption>
           </figure>
+          <figure>
+            <img
+              src={traditionalHall.url}
+              alt="Traditional interior hall with carved wooden chairs, woven wall panels and arched windows at Getva Hotel"
+              loading="lazy"
+              className="aspect-[4/3] w-full rounded-sm object-cover"
+            />
+            <figcaption className="mt-3 text-sm text-earth/60">
+              The traditional hall — coffee, conversation, and carved wood.
+            </figcaption>
+          </figure>
         </div>
       </section>
 

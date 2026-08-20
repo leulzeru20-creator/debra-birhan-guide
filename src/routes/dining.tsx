@@ -99,6 +99,12 @@ function DiningPage() {
           </div>
 
           <div className="border border-earth/10 bg-white p-8 md:p-12">
+            <img
+              src={traditionalHall.url}
+              alt="Traditional interior hall with carved wooden chairs, woven wall panels and arched windows at Getva Hotel"
+              loading="lazy"
+              className="mb-6 aspect-[4/3] w-full rounded-sm object-cover"
+            />
             <div className="mb-6 h-px w-12 bg-clay"></div>
             <h2 className="mb-4 text-2xl text-earth">Circular Traditional Hall</h2>
             <p className="mb-6 text-earth/70">
