@@ -1,4 +1,81 @@
+import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useBooking, ROOM_TYPES } from "@/components/BookingDialog";
+
+function isoOffset(days: number) {
+  const d = new Date();
+  d.setDate(d.getDate() + days);
+  return d.toISOString().slice(0, 10);
+}
+
+function HeroBookingWidget() {
+  const openBooking = useBooking();
+  const [checkIn, setCheckIn] = useState(isoOffset(0));
+  const [checkOut, setCheckOut] = useState(isoOffset(1));
+  const [roomType, setRoomType] = useState<string>(ROOM_TYPES[0]);
+
+  return (
+    <div className="flex flex-col gap-4 sm:flex-row sm:items-end">
+      <div className="flex-1 border border-earth/20 bg-white/50 p-4">
+        <label htmlFor="hero-checkin" className="text-label mb-1 block text-earth/50">
+          Check In
+        </label>
+        <input
+          id="hero-checkin"
+          type="date"
+          min={isoOffset(0)}
+          value={checkIn}
+          onChange={(e) => {
+            setCheckIn(e.target.value);
+            if (e.target.value >= checkOut) {
+              const d = new Date(e.target.value);
+              d.setDate(d.getDate() + 1);
+              setCheckOut(d.toISOString().slice(0, 10));
+            }
+          }}
+          className="w-full bg-transparent text-sm font-medium text-earth focus:outline-none"
+        />
+      </div>
+      <div className="flex-1 border border-earth/20 bg-white/50 p-4">
+        <label htmlFor="hero-checkout" className="text-label mb-1 block text-earth/50">
+          Check Out
+        </label>
+        <input
+          id="hero-checkout"
+          type="date"
+          min={checkIn}
+          value={checkOut}
+          onChange={(e) => setCheckOut(e.target.value)}
+          className="w-full bg-transparent text-sm font-medium text-earth focus:outline-none"
+        />
+      </div>
+      <div className="flex-1 border border-earth/20 bg-white/50 p-4">
+        <label htmlFor="hero-room" className="text-label mb-1 block text-earth/50">
+          Room
+        </label>
+        <select
+          id="hero-room"
+          value={roomType}
+          onChange={(e) => setRoomType(e.target.value)}
+          className="w-full bg-transparent text-sm font-medium text-earth focus:outline-none"
+        >
+          {ROOM_TYPES.map((type) => (
+            <option key={type} value={type}>
+              {type}
+            </option>
+          ))}
+        </select>
+      </div>
+      <button
+        type="button"
+        onClick={() => openBooking({ checkIn, checkOut, roomType })}
+        className="btn-primary flex-shrink-0"
+      >
+        Check Availability
+      </button>
+    </div>
+  );
+}
 import hotelFront from "@/assets/getva-hotel.jpg.asset.json";
 import guestRoom from "@/assets/getva-hotel_1.jpg.asset.json";
 import garden from "@/assets/caption_1.jpg.asset.json";
