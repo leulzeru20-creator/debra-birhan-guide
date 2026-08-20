@@ -11,6 +11,17 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { BookingProvider, useBooking } from "@/components/BookingDialog";
+import { Toaster } from "@/components/ui/sonner";
+
+function BookNowButton() {
+  const openBooking = useBooking();
+  return (
+    <button type="button" onClick={() => openBooking()} className="btn-secondary text-sm">
+      Book a Room
+    </button>
+  );
+}
 
 function NotFoundComponent() {
   return (
@@ -166,12 +177,7 @@ function Header() {
           Contact
         </Link>
       </div>
-      <Link
-        to="/contact"
-        className="btn-secondary text-sm"
-      >
-        Book a Room
-      </Link>
+      <BookNowButton />
     </nav>
   );
 }
@@ -235,13 +241,16 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="flex min-h-screen flex-col">
-        <Header />
-        <main className="flex-1">
-          <Outlet />
-        </main>
-        <Footer />
-      </div>
+      <BookingProvider>
+        <div className="flex min-h-screen flex-col">
+          <Header />
+          <main className="flex-1">
+            <Outlet />
+          </main>
+          <Footer />
+        </div>
+        <Toaster />
+      </BookingProvider>
     </QueryClientProvider>
   );
 }
