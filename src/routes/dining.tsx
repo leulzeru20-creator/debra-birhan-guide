@@ -6,6 +6,7 @@ import buffet from "@/assets/breakfast-buffet.jpg.asset.json";
 import pastaPlate from "@/assets/pasta-plate.jpg.asset.json";
 import windowTable from "@/assets/window-table.jpg.asset.json";
 import bar from "@/assets/bar.jpg.asset.json";
+import traditionalHall from "@/assets/extra.jpg.asset.json";
 
 export const Route = createFileRoute("/dining")({
   head: () => ({

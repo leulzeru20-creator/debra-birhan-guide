@@ -8,6 +8,7 @@ import conference from "@/assets/enourmous-conference.jpg.asset.json";
 import lobby from "@/assets/lobby.jpg.asset.json";
 import hotelNight from "@/assets/hotel-night.jpg.asset.json";
 import eventHall from "@/assets/event-hall.jpg.asset.json";
+import traditionalHall from "@/assets/extra.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
