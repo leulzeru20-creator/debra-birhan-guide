@@ -166,12 +166,7 @@ function Header() {
           Contact
         </Link>
       </div>
-      <Link
-        to="/contact"
-        className="btn-secondary text-sm"
-      >
-        Book a Room
-      </Link>
+      <BookNowButton />
     </nav>
   );
 }
