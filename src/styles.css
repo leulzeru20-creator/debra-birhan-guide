@@ -81,8 +81,11 @@
   --earth: oklch(0.402 0.044 37.959);
   --clay: oklch(0.634 0.155 50.266);
   --highland: oklch(0.389 0.086 137.147);
-  --warm-bg: oklch(0.977 0.007 80.721);
   --warm-bg-deep: oklch(0.94 0.01 80);
+  --gold: oklch(0.78 0.14 95);
+  --gold-light: oklch(0.88 0.1 95);
+  --gold-dark: oklch(0.62 0.16 95);
+
 
   --background: var(--warm-bg);
   --foreground: var(--earth);
