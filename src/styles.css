@@ -227,11 +227,11 @@
   }
 
   .hero-headline {
-    font-family: var(--font-serif);
+    font-family: "Runethia", var(--font-serif);
     font-size: clamp(3rem, 8vw, 6.5rem);
-    line-height: 1;
-    font-weight: 600;
-    letter-spacing: -0.02em;
+    line-height: 1.1;
+    font-weight: 400;
+    letter-spacing: 0;
     text-transform: capitalize;
     background: linear-gradient(
       110deg,
@@ -246,21 +246,6 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: var(--gold);
-    filter: drop-shadow(0 2px 8px color-mix(in oklab, var(--gold) 25%, transparent));
-    position: relative;
-  }
-
-  .hero-headline::after {
-    content: attr(data-text);
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    -webkit-text-fill-color: transparent;
-    background: linear-gradient(110deg, var(--gold-light), var(--gold-dark), var(--gold-light));
-    -webkit-background-clip: text;
-    background-clip: text;
-    filter: blur(18px);
-    opacity: 0.4;
   }
 
 }
