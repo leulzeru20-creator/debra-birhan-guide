@@ -66,6 +66,10 @@
   --color-clay: var(--clay);
   --color-highland: var(--highland);
   --color-warm-bg: var(--warm-bg);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+
 }
 
 :root {
