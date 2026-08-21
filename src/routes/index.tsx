@@ -112,7 +112,7 @@ function HomePage() {
               Zerayakob Street · Debre Birhan
             </span>
             <h1 className="hero-headline mb-6">
-              comfort has name in Debre Birhan - Getva
+              comfort has a name in Debre Birhan - Getva
             </h1>
 
 
