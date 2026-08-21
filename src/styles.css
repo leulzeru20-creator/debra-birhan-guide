@@ -66,6 +66,10 @@
   --color-clay: var(--clay);
   --color-highland: var(--highland);
   --color-warm-bg: var(--warm-bg);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+
 }
 
 :root {
@@ -79,6 +83,11 @@
   --highland: oklch(0.389 0.086 137.147);
   --warm-bg: oklch(0.977 0.007 80.721);
   --warm-bg-deep: oklch(0.94 0.01 80);
+  --gold: oklch(0.78 0.14 95);
+  --gold-light: oklch(0.88 0.1 95);
+  --gold-dark: oklch(0.62 0.16 95);
+
+
 
   --background: var(--warm-bg);
   --foreground: var(--earth);
@@ -216,4 +225,42 @@
     text-transform: uppercase;
     letter-spacing: 0.2em;
   }
+
+  .hero-headline {
+    font-family: var(--font-serif);
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+    background: linear-gradient(
+      110deg,
+      var(--gold-dark) 0%,
+      var(--gold) 25%,
+      var(--gold-light) 45%,
+      var(--gold) 60%,
+      var(--gold-dark) 85%,
+      var(--gold-light) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
+    filter: drop-shadow(0 2px 8px color-mix(in oklab, var(--gold) 25%, transparent));
+    position: relative;
+  }
+
+  .hero-headline::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(110deg, var(--gold-light), var(--gold-dark), var(--gold-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+    filter: blur(18px);
+    opacity: 0.4;
+  }
+
 }
