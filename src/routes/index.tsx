@@ -111,9 +111,10 @@ function HomePage() {
             <span className="text-label mb-4 block text-clay">
               Zerayakob Street · Debre Birhan
             </span>
-            <h1 className="mb-6 text-5xl leading-[1.1] text-earth md:text-7xl">
-              A good night's sleep, <span className="italic">2,800 m up.</span>
+            <h1 className="hero-headline mb-6">
+              comfort has name in Debre Birhan - Getva
             </h1>
+
             <p className="mb-8 max-w-md text-lg leading-relaxed text-earth/70">
               You've been on the road from Addis for three hours. Park for free, drop your bag, take a hot shower, and eat something warm in the garden. That's Getva.
             </p>
