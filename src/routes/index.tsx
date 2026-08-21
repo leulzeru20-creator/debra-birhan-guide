@@ -76,16 +76,16 @@ function HeroBookingWidget() {
     </div>
   );
 }
-import hotelFront from "@/assets/getva-hotel.jpg.asset.json";
-import guestRoom from "@/assets/getva-hotel_1.jpg.asset.json";
-import garden from "@/assets/caption_1.jpg.asset.json";
-import bambooLounge from "@/assets/caption_2.jpg.asset.json";
-import terrace from "@/assets/caption.jpg.asset.json";
-import conference from "@/assets/enourmous-conference.jpg.asset.json";
-import lobby from "@/assets/lobby.jpg.asset.json";
-import hotelNight from "@/assets/hotel-night.jpg.asset.json";
-import eventHall from "@/assets/event-hall.jpg.asset.json";
-import traditionalHall from "@/assets/extra.jpg.asset.json";
+import hotelFront from "@/assets/getva-hotel.jpg";
+import guestRoom from "@/assets/getva-hotel_1.jpg";
+import garden from "@/assets/caption_1.jpg";
+import bambooLounge from "@/assets/caption_2.jpg";
+import terrace from "@/assets/caption.jpg";
+import conference from "@/assets/enourmous-conference.jpg";
+import lobby from "@/assets/lobby.jpg";
+import hotelNight from "@/assets/hotel-night.jpg";
+import eventHall from "@/assets/event-hall.jpg";
+import traditionalHall from "@/assets/extra.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -121,7 +121,7 @@ function HomePage() {
           </div>
           <div className="relative">
             <img
-              src={hotelFront.url}
+              src={hotelFront}
               alt="The Getva Hotel building on Zerayakob Street in Debre Birhan under a bright highland sky"
               className="aspect-[4/5] w-full rounded-sm object-cover shadow-xl"
             />
@@ -175,7 +175,7 @@ function HomePage() {
         <div className="grid gap-6 md:grid-cols-3">
           <figure>
             <img
-              src={garden.url}
+              src={garden}
               alt="White wicker chairs and tables in the shaded garden at Getva Hotel"
               loading="lazy"
               className="aspect-[4/3] w-full rounded-sm object-cover"
@@ -186,7 +186,7 @@ function HomePage() {
           </figure>
           <figure>
             <img
-              src={bambooLounge.url}
+              src={bambooLounge}
               alt="Bamboo-clad lounge with arched windows and woven chairs at Getva Hotel"
               loading="lazy"
               className="aspect-[4/3] w-full rounded-sm object-cover"
@@ -197,7 +197,7 @@ function HomePage() {
           </figure>
           <figure>
             <img
-              src={terrace.url}
+              src={terrace}
               alt="Covered outdoor terrace with tables and a woven mesob at Getva Hotel"
               loading="lazy"
               className="aspect-[4/3] w-full rounded-sm object-cover"
@@ -208,7 +208,7 @@ function HomePage() {
           </figure>
           <figure>
             <img
-              src={lobby.url}
+              src={lobby}
               alt="Getva Hotel lobby with tiled floor, plants and low armchairs under coloured lighting"
               loading="lazy"
               className="aspect-[4/3] w-full rounded-sm object-cover"
@@ -219,7 +219,7 @@ function HomePage() {
           </figure>
           <figure>
             <img
-              src={eventHall.url}
+              src={eventHall}
               alt="Large hall at Getva Hotel set with rows of red and gold banquet chairs"
               loading="lazy"
               className="aspect-[4/3] w-full rounded-sm object-cover"
@@ -230,7 +230,7 @@ function HomePage() {
           </figure>
           <figure>
             <img
-              src={hotelNight.url}
+              src={hotelNight}
               alt="Getva Hotel at night with its lit rooftop sign in Debre Birhan"
               loading="lazy"
               className="aspect-[4/3] w-full rounded-sm object-cover"
@@ -241,7 +241,7 @@ function HomePage() {
           </figure>
           <figure>
             <img
-              src={traditionalHall.url}
+              src={traditionalHall}
               alt="Traditional interior hall with carved wooden chairs, woven wall panels and arched windows at Getva Hotel"
               loading="lazy"
               className="aspect-[4/3] w-full rounded-sm object-cover"
@@ -271,7 +271,7 @@ function HomePage() {
         <div className="grid gap-10 md:grid-cols-2">
           <Link to="/rooms" className="group block">
             <img
-              src={guestRoom.url}
+              src={guestRoom}
               alt="Guest room bed at Getva Hotel made up with white linen and a gold runner"
               loading="lazy"
               className="mb-6 aspect-[4/3] w-full rounded-sm bg-stone-100 object-cover transition-transform duration-500 group-hover:scale-[1.02]"
@@ -290,7 +290,7 @@ function HomePage() {
 
           <Link to="/rooms" className="group block">
             <img
-              src={conference.url}
+              src={conference}
               alt="Long polished conference table with leather chairs and a projector screen at Getva Hotel"
               loading="lazy"
               className="mb-6 aspect-[4/3] w-full rounded-sm bg-stone-100 object-cover transition-transform duration-500 group-hover:scale-[1.02]"

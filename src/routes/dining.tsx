@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
-import terrace from "@/assets/caption.jpg.asset.json";
-import bambooLounge from "@/assets/caption_2.jpg.asset.json";
-import restaurantHall from "@/assets/restaurant-hall.jpg.asset.json";
-import buffet from "@/assets/breakfast-buffet.jpg.asset.json";
-import pastaPlate from "@/assets/pasta-plate.jpg.asset.json";
-import windowTable from "@/assets/window-table.jpg.asset.json";
-import bar from "@/assets/bar.jpg.asset.json";
-import traditionalHall from "@/assets/extra.jpg.asset.json";
+import terrace from "@/assets/caption.jpg";
+import bambooLounge from "@/assets/caption_2.jpg";
+import restaurantHall from "@/assets/restaurant-hall.jpg";
+import buffet from "@/assets/breakfast-buffet.jpg";
+import pastaPlate from "@/assets/pasta-plate.jpg";
+import windowTable from "@/assets/window-table.jpg";
+import bar from "@/assets/bar.jpg";
+import traditionalHall from "@/assets/extra.jpg";
 
 export const Route = createFileRoute("/dining")({
   head: () => ({
@@ -35,13 +35,13 @@ function DiningPage() {
 
         <div className="mb-8 grid gap-6 md:grid-cols-2">
           <img
-            src={restaurantHall.url}
+            src={restaurantHall}
             alt="Getva Hotel restaurant with white chair covers and burgundy table linens"
             loading="lazy"
             className="aspect-[4/3] w-full rounded-sm object-cover"
           />
           <img
-            src={buffet.url}
+            src={buffet}
             alt="Breakfast buffet line with chafing dishes and bowls of salads and fruit"
             loading="lazy"
             className="aspect-[4/3] w-full rounded-sm object-cover"
@@ -50,25 +50,25 @@ function DiningPage() {
 
         <div className="mb-16 grid gap-6 md:grid-cols-4">
           <img
-            src={pastaPlate.url}
+            src={pastaPlate}
             alt="Spaghetti with meatballs, kofta and open sandwiches served at Getva Hotel"
             loading="lazy"
             className="aspect-square w-full rounded-sm object-cover"
           />
           <img
-            src={windowTable.url}
+            src={windowTable}
             alt="Small red-clothed table for two by a large window at Getva Hotel"
             loading="lazy"
             className="aspect-square w-full rounded-sm object-cover"
           />
           <img
-            src={terrace.url}
+            src={terrace}
             alt="Covered terrace dining area with tables and a woven mesob at Getva Hotel"
             loading="lazy"
             className="aspect-square w-full rounded-sm object-cover"
           />
           <img
-            src={bambooLounge.url}
+            src={bambooLounge}
             alt="Bamboo lounge with arched windows and woven chairs at Getva Hotel"
             loading="lazy"
             className="aspect-square w-full rounded-sm object-cover"
@@ -100,7 +100,7 @@ function DiningPage() {
 
           <div className="border border-earth/10 bg-white p-8 md:p-12">
             <img
-              src={traditionalHall.url}
+              src={traditionalHall}
               alt="Traditional interior hall with carved wooden chairs, woven wall panels and arched windows at Getva Hotel"
               loading="lazy"
               className="mb-6 aspect-[4/3] w-full rounded-sm object-cover"
@@ -129,7 +129,7 @@ function DiningPage() {
 
         <div className="mt-16 grid items-center gap-10 lg:grid-cols-2">
           <img
-            src={bar.url}
+            src={bar}
             alt="The lit bar at Getva Hotel with bottles on glass shelves and low tables"
             loading="lazy"
             className="aspect-[4/3] w-full rounded-sm object-cover"

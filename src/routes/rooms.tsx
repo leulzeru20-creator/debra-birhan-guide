@@ -1,8 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import guestRoom from "@/assets/getva-hotel_1.jpg.asset.json";
-import conference from "@/assets/enourmous-conference.jpg.asset.json";
-import eventHall from "@/assets/event-hall.jpg.asset.json";
-import ankoberHall from "@/assets/ankober-hall.jpg.asset.json";
+import guestRoom from "@/assets/getva-hotel_1.jpg";
+import conference from "@/assets/enourmous-conference.jpg";
+import eventHall from "@/assets/event-hall.jpg";
+import ankoberHall from "@/assets/ankober-hall.jpg";
 
 export const Route = createFileRoute("/rooms")({
   head: () => ({
@@ -26,7 +26,7 @@ function RoomsPage() {
         "A wide bed with fresh white linen, a wardrobe, and a bathroom with reliable hot water. Simple, clean, and quiet enough to sleep off a long drive.",
       price: "From $45 / night",
       note: "Breakfast included",
-      image: guestRoom.url,
+      image: guestRoom,
       alt: "Standard room bed at Getva Hotel made up with white linen and a gold runner",
       features: ["Wide double bed", "Hot-water bathroom", "WiFi", "Flat-screen TV"],
     },
@@ -36,7 +36,7 @@ function RoomsPage() {
         "The same bed, with more floor space and a desk that fits a laptop and papers. The better pick if you're here to work for a few days.",
       price: "From $75 / night",
       note: "Desk and seating area",
-      image: guestRoom.url,
+      image: guestRoom,
       alt: "Executive room at Getva Hotel with a large bed and seating area",
       features: ["Extra space", "Work desk", "Seating area", "WiFi"],
     },
@@ -46,7 +46,7 @@ function RoomsPage() {
         "A long boardroom table with leather chairs for 40 or more, a projector screen, sound, and power at every seat. Coffee breaks and lunch can be served from our kitchen.",
       price: "Day rates on request",
       note: "Catering available",
-      image: conference.url,
+      image: conference,
       alt: "Long polished conference table with leather chairs and a projector screen at Getva Hotel",
       features: ["40+ seats", "Projector & screen", "Power at each seat", "Catering on site"],
     },
@@ -110,7 +110,7 @@ function RoomsPage() {
           <div className="grid gap-6 md:grid-cols-2">
             <figure>
               <img
-                src={eventHall.url}
+                src={eventHall}
                 alt="Large hall at Getva Hotel set with rows of red and gold banquet chairs facing a stage"
                 loading="lazy"
                 className="aspect-[16/10] w-full rounded-sm object-cover"
@@ -121,7 +121,7 @@ function RoomsPage() {
             </figure>
             <figure>
               <img
-                src={ankoberHall.url}
+                src={ankoberHall}
                 alt="Ankober Hall at Getva Hotel decorated for a wedding with blue drapes and a flower archway"
                 loading="lazy"
                 className="aspect-[16/10] w-full rounded-sm object-cover"

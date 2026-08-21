@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import hotelFront from "@/assets/getva-hotel.jpg.asset.json";
+import hotelFront from "@/assets/getva-hotel.jpg";
 
 export const Route = createFileRoute("/location")({
   head: () => ({
@@ -27,7 +27,7 @@ function LocationPage() {
         </div>
 
         <img
-          src={hotelFront.url}
+          src={hotelFront}
           alt="The Getva Hotel building in Debre Birhan with its red rooftop sign"
           loading="lazy"
           className="mb-16 aspect-[16/9] w-full rounded-sm object-cover"
