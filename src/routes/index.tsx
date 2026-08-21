@@ -111,10 +111,7 @@ function HomePage() {
             <span className="text-label mb-4 block text-clay">
               Zerayakob Street · Debre Birhan
             </span>
-            <h1
-              className="hero-headline mb-6"
-              data-text="comfort has name in Debre Birhan - Getva"
-            >
+            <h1 className="hero-headline mb-6">
               comfort has name in Debre Birhan - Getva
             </h1>
 
