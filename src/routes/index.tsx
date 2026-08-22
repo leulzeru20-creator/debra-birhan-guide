@@ -76,7 +76,7 @@ function HeroBookingWidget() {
     </div>
   );
 }
-import hotelFront from "@/assets/getva-hotel.jpg";
+import restaurantDining from "@/assets/restaurant-dining.webp";
 import guestRoom from "@/assets/getva-hotel_1.jpg";
 import garden from "@/assets/caption_1.jpg";
 import bambooLounge from "@/assets/caption_2.jpg";
@@ -107,8 +107,8 @@ function HomePage() {
       {/* Hero Section — full-bleed image, left-aligned text */}
       <header className="relative isolate min-h-[88vh] overflow-hidden">
         <img
-          src={hotelFront}
-          alt="The Getva Hotel building on Zerayakob Street in Debre Birhan under a bright highland sky"
+          src={restaurantDining}
+          alt="The formal restaurant at Getva Hotel, dressed with white chairs and red tablecloths"
           className="absolute inset-0 -z-20 size-full object-cover"
         />
         <div
