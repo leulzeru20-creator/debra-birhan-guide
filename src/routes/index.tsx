@@ -312,22 +312,23 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Trust Banner */}
+      {/* Trust Banner — deep highland block for contrast */}
       <section className="mb-24 px-8">
-        <div className="section-container bg-stone-100 p-12 text-center">
-          <h2 className="mb-8 text-sm font-medium uppercase tracking-[0.3em] text-earth/40">
+        <div className="section-container bg-highland p-12 text-center text-warm-bg">
+          <h2 className="mb-8 text-sm font-medium uppercase tracking-[0.3em] text-warm-bg/50">
             What comes with the room
           </h2>
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             {["Free Parking", "WiFi Throughout", "Gym & Playground", "Restaurant & Bar"].map((item) => (
               <div key={item} className="flex flex-col items-center">
-                <div className="mb-3 size-8 rounded-full border border-earth/20"></div>
+                <div className="mb-3 size-8 rounded-full border border-gold/60"></div>
                 <span className="text-[10px] font-bold uppercase tracking-tighter">{item}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
+
     </>
   );
 }
