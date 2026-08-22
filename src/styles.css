@@ -227,11 +227,11 @@
   }
 
   .hero-headline {
-    font-family: "Runethia", var(--font-serif);
-    font-size: clamp(3rem, 8vw, 6.5rem);
-    line-height: 1.1;
-    font-weight: 400;
-    letter-spacing: 0;
+    font-family: "Playfair Display", var(--font-serif);
+    font-size: clamp(2.75rem, 6.5vw, 5.5rem);
+    line-height: 1.02;
+    font-weight: 800;
+    letter-spacing: -0.02em;
     text-transform: capitalize;
     background: linear-gradient(
       110deg,
@@ -247,6 +247,7 @@
     -webkit-text-fill-color: transparent;
     color: var(--gold);
   }
+
 
 }
 
