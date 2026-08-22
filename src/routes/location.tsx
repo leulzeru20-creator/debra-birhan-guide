@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import hotelFront from "@/assets/getva-hotel.jpg";
+import locationMap from "@/assets/location-map.png";
 
 export const Route = createFileRoute("/location")({
   head: () => ({
