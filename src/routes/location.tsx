@@ -26,12 +26,24 @@ function LocationPage() {
           </p>
         </div>
 
-        <img
-          src={hotelFront}
-          alt="The Getva Hotel building in Debre Birhan with its red rooftop sign"
-          loading="lazy"
-          className="mb-16 aspect-[16/9] w-full rounded-sm object-cover"
-        />
+        <a
+          href="https://maps.app.goo.gl/dmCQkt576oWoXr5e9"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group relative mb-16 block aspect-[16/9] overflow-hidden rounded-sm"
+        >
+          <img
+            src={locationMap}
+            alt="Map showing Getva Hotel location on Zerayakob Street in Debre Birhan"
+            loading="lazy"
+            className="size-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+          />
+          <div className="absolute inset-0 flex items-center justify-center bg-earth/0 transition-colors duration-300 group-hover:bg-earth/40">
+            <span className="rounded-full bg-warm-bg px-4 py-2 text-sm font-semibold text-earth opacity-0 shadow-sm transition-opacity duration-300 group-hover:opacity-100">
+              View on Google Maps
+            </span>
+          </div>
+        </a>
 
         <div className="grid gap-12 lg:grid-cols-2">
           <div className="border border-earth/10 bg-white p-8 md:p-12">
