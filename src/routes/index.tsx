@@ -16,7 +16,7 @@ function HeroBookingWidget() {
 
   return (
     <div className="flex flex-col gap-4 sm:flex-row sm:items-end">
-      <div className="flex-1 border border-warm-bg/25 bg-warm-bg/95 p-4 backdrop-blur-sm">
+      <div className="min-w-[9rem] flex-1 border border-warm-bg/25 bg-warm-bg/95 p-4 backdrop-blur-sm">
         <label htmlFor="hero-checkin" className="text-label mb-1 block text-earth/50">
           Check In
         </label>
@@ -36,7 +36,7 @@ function HeroBookingWidget() {
           className="w-full bg-transparent text-sm font-medium text-earth focus:outline-none"
         />
       </div>
-      <div className="flex-1 border border-warm-bg/25 bg-warm-bg/95 p-4 backdrop-blur-sm">
+      <div className="min-w-[9rem] flex-1 border border-warm-bg/25 bg-warm-bg/95 p-4 backdrop-blur-sm">
         <label htmlFor="hero-checkout" className="text-label mb-1 block text-earth/50">
           Check Out
         </label>
@@ -49,7 +49,7 @@ function HeroBookingWidget() {
           className="w-full bg-transparent text-sm font-medium text-earth focus:outline-none"
         />
       </div>
-      <div className="flex-1 border border-warm-bg/25 bg-warm-bg/95 p-4 backdrop-blur-sm">
+      <div className="min-w-[9rem] flex-1 border border-warm-bg/25 bg-warm-bg/95 p-4 backdrop-blur-sm">
         <label htmlFor="hero-room" className="text-label mb-1 block text-earth/50">
           Room
         </label>
