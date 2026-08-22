@@ -104,38 +104,39 @@ export const Route = createFileRoute("/")({
 function HomePage() {
   return (
     <>
-      {/* Hero Section */}
-      <header className="section-container relative py-16 md:py-24">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
-          <div>
-            <span className="text-label mb-4 block text-clay">
+      {/* Hero Section — full-bleed image, left-aligned text */}
+      <header className="relative isolate min-h-[88vh] overflow-hidden">
+        <img
+          src={hotelNight}
+          alt="Getva Hotel in Debre Birhan lit up at night beneath its rooftop sign"
+          className="absolute inset-0 -z-20 size-full object-cover"
+        />
+        <div
+          className="absolute inset-0 -z-10"
+          style={{
+            background:
+              "linear-gradient(100deg, oklch(0.19 0.03 40 / 0.94) 0%, oklch(0.19 0.03 40 / 0.82) 42%, oklch(0.19 0.03 40 / 0.45) 72%, oklch(0.19 0.03 40 / 0.25) 100%)",
+          }}
+        />
+        <div className="section-container relative flex min-h-[88vh] items-center py-24">
+          <div className="max-w-2xl text-left">
+            <span className="text-label mb-4 block text-gold-light">
               Zerayakob Street · Debre Birhan
             </span>
             <h1 className="hero-headline mt-4 mb-6">
               comfort has a name in Debre Birhan - Getva
             </h1>
 
-
-            <p className="mb-8 max-w-md text-lg leading-relaxed text-earth/70">
+            <p className="mb-10 max-w-lg text-lg leading-relaxed text-warm-bg/80">
               You've been on the road from Addis for three hours. Park for free, drop your bag, take a hot shower, and eat something warm in the garden. That's Getva.
             </p>
-            <HeroBookingWidget />
-          </div>
-          <div className="relative">
-            <img
-              src={hotelFront}
-              alt="The Getva Hotel building on Zerayakob Street in Debre Birhan under a bright highland sky"
-              className="aspect-[4/5] w-full rounded-sm object-cover shadow-xl"
-            />
-            <div className="absolute -bottom-6 -left-6 hidden max-w-[240px] bg-highland p-8 text-warm-bg md:block">
-              <p className="text-sm italic leading-relaxed">
-                "Clean room, hot water, and the staff actually remembered my name by the second day."
-              </p>
-              <p className="text-label mt-4 opacity-70">— Samuel T., guest</p>
+            <div className="max-w-3xl">
+              <HeroBookingWidget />
             </div>
           </div>
         </div>
       </header>
+
 
       {/* Key Features */}
       <section className="bg-earth py-20 text-warm-bg">
