@@ -76,6 +76,7 @@ function HeroBookingWidget() {
     </div>
   );
 }
+import hotelFront from "@/assets/getva-hotel.jpg";
 import guestRoom from "@/assets/getva-hotel_1.jpg";
 import garden from "@/assets/caption_1.jpg";
 import bambooLounge from "@/assets/caption_2.jpg";
