@@ -16,7 +16,7 @@ function HeroBookingWidget() {
 
   return (
     <div className="flex flex-col gap-4 sm:flex-row sm:items-end">
-      <div className="flex-1 border border-earth/20 bg-white/50 p-4">
+      <div className="min-w-[9rem] flex-1 border border-warm-bg/25 bg-warm-bg/95 p-4 backdrop-blur-sm">
         <label htmlFor="hero-checkin" className="text-label mb-1 block text-earth/50">
           Check In
         </label>
@@ -36,7 +36,7 @@ function HeroBookingWidget() {
           className="w-full bg-transparent text-sm font-medium text-earth focus:outline-none"
         />
       </div>
-      <div className="flex-1 border border-earth/20 bg-white/50 p-4">
+      <div className="min-w-[9rem] flex-1 border border-warm-bg/25 bg-warm-bg/95 p-4 backdrop-blur-sm">
         <label htmlFor="hero-checkout" className="text-label mb-1 block text-earth/50">
           Check Out
         </label>
@@ -49,7 +49,7 @@ function HeroBookingWidget() {
           className="w-full bg-transparent text-sm font-medium text-earth focus:outline-none"
         />
       </div>
-      <div className="flex-1 border border-earth/20 bg-white/50 p-4">
+      <div className="min-w-[9rem] flex-1 border border-warm-bg/25 bg-warm-bg/95 p-4 backdrop-blur-sm">
         <label htmlFor="hero-room" className="text-label mb-1 block text-earth/50">
           Room
         </label>
@@ -104,38 +104,39 @@ export const Route = createFileRoute("/")({
 function HomePage() {
   return (
     <>
-      {/* Hero Section */}
-      <header className="section-container relative py-16 md:py-24">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
-          <div>
-            <span className="text-label mb-4 block text-clay">
+      {/* Hero Section — full-bleed image, left-aligned text */}
+      <header className="relative isolate min-h-[88vh] overflow-hidden">
+        <img
+          src={hotelFront}
+          alt="The Getva Hotel building on Zerayakob Street in Debre Birhan under a bright highland sky"
+          className="absolute inset-0 -z-20 size-full object-cover"
+        />
+        <div
+          className="absolute inset-0 -z-10"
+          style={{
+            background:
+              "linear-gradient(100deg, oklch(0.19 0.03 40 / 0.94) 0%, oklch(0.19 0.03 40 / 0.82) 42%, oklch(0.19 0.03 40 / 0.45) 72%, oklch(0.19 0.03 40 / 0.25) 100%)",
+          }}
+        />
+        <div className="section-container relative flex min-h-[88vh] items-center py-24">
+          <div className="max-w-2xl text-left">
+            <span className="text-label mb-4 block text-gold-light">
               Zerayakob Street · Debre Birhan
             </span>
             <h1 className="hero-headline mt-4 mb-6">
               comfort has a name in Debre Birhan - Getva
             </h1>
 
-
-            <p className="mb-8 max-w-md text-lg leading-relaxed text-earth/70">
+            <p className="mb-10 max-w-lg text-lg leading-relaxed text-warm-bg/80">
               You've been on the road from Addis for three hours. Park for free, drop your bag, take a hot shower, and eat something warm in the garden. That's Getva.
             </p>
-            <HeroBookingWidget />
-          </div>
-          <div className="relative">
-            <img
-              src={hotelFront}
-              alt="The Getva Hotel building on Zerayakob Street in Debre Birhan under a bright highland sky"
-              className="aspect-[4/5] w-full rounded-sm object-cover shadow-xl"
-            />
-            <div className="absolute -bottom-6 -left-6 hidden max-w-[240px] bg-highland p-8 text-warm-bg md:block">
-              <p className="text-sm italic leading-relaxed">
-                "Clean room, hot water, and the staff actually remembered my name by the second day."
-              </p>
-              <p className="text-label mt-4 opacity-70">— Samuel T., guest</p>
+            <div className="max-w-3xl">
+              <HeroBookingWidget />
             </div>
           </div>
         </div>
       </header>
+
 
       {/* Key Features */}
       <section className="bg-earth py-20 text-warm-bg">
@@ -311,22 +312,23 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Trust Banner */}
+      {/* Trust Banner — deep highland block for contrast */}
       <section className="mb-24 px-8">
-        <div className="section-container bg-stone-100 p-12 text-center">
-          <h2 className="mb-8 text-sm font-medium uppercase tracking-[0.3em] text-earth/40">
+        <div className="section-container bg-highland p-12 text-center text-warm-bg">
+          <h2 className="mb-8 text-sm font-medium uppercase tracking-[0.3em] text-warm-bg/50">
             What comes with the room
           </h2>
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             {["Free Parking", "WiFi Throughout", "Gym & Playground", "Restaurant & Bar"].map((item) => (
               <div key={item} className="flex flex-col items-center">
-                <div className="mb-3 size-8 rounded-full border border-earth/20"></div>
+                <div className="mb-3 size-8 rounded-full border border-gold/60"></div>
                 <span className="text-[10px] font-bold uppercase tracking-tighter">{item}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
+
     </>
   );
 }
