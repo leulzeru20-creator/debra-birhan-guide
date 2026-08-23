@@ -211,17 +211,22 @@ function Footer() {
           </h5>
           <ul className="space-y-4 text-sm">
             <li>
-              <a href="#" className="transition-colors hover:text-clay">
-                Instagram
-              </a>
-            </li>
-            <li>
-              <a href="#" className="transition-colors hover:text-clay">
+              <a
+                href="https://web.facebook.com/getvahoteldb/?_rdc=1&_rdr#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-clay"
+              >
                 Facebook
               </a>
             </li>
             <li>
-              <a href="#" className="transition-colors hover:text-clay">
+              <a
+                href="https://www.tripadvisor.com/Hotel_Review-g5561697-d12636167-Reviews-Getva_Hotel-Debre_Birhan_Amhara_Region.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-clay"
+              >
                 Tripadvisor
               </a>
             </li>
