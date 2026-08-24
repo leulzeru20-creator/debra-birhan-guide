@@ -191,9 +191,18 @@ export function BookingForm({
 
       <div>
         <label htmlFor="bf-phone" className={labelClass}>
-          Phone (optional)
+          Phone
         </label>
-        <input id="bf-phone" name="phone" maxLength={40} placeholder="+251 …" className={inputClass} />
+        <input
+          id="bf-phone"
+          name="phone"
+          type="tel"
+          required
+          minLength={6}
+          maxLength={40}
+          placeholder="+251 …"
+          className={inputClass}
+        />
       </div>
 
       <div>
@@ -204,6 +213,7 @@ export function BookingForm({
           id="bf-message"
           name="message"
           rows={3}
+          required
           maxLength={1000}
           placeholder="Late arrival, extra bed, airport pickup…"
           className={inputClass}
