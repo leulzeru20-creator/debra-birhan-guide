@@ -214,7 +214,7 @@ export function BookingForm({
         {submitting ? "Sending…" : "Send Booking Request"}
       </button>
       <p className="text-xs text-earth/50">
-        Goes straight to the front desk at stay@getvahotel.com. We reply to the email you give us.
+        Goes straight to the front desk at zerutechane@gmail.com. We reply to the email you give us.
       </p>
     </form>
   );

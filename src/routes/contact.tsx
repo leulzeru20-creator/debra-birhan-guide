@@ -40,7 +40,7 @@ function ContactPage() {
               </div>
               <div>
                 <dt className="text-label mb-1 text-earth/40">Email</dt>
-                <dd className="text-earth/80">stay@getvahotel.com</dd>
+                <dd className="text-earth/80">zerutechane@gmail.com</dd>
               </div>
               <div>
                 <dt className="text-label mb-1 text-earth/40">Front Desk Hours</dt>

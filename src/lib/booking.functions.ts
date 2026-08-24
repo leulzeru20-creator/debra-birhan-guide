@@ -63,7 +63,7 @@ export const sendBookingRequest = createServerFn({ method: "POST" })
       },
       body: JSON.stringify({
         from: "Getva Hotel Website <onboarding@resend.dev>",
-        to: ["stay@getvahotel.com"],
+        to: ["zerutechane@gmail.com"],
         reply_to: data.email,
         subject: `Booking request — ${data.roomType}, ${data.checkIn} to ${data.checkOut}`,
         html,

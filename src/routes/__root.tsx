@@ -202,7 +202,7 @@ function Footer() {
             <li>Zerayakob Street, Debre Birhan</li>
             <li>Amhara Region, Ethiopia</li>
             <li>+251 911 000 000</li>
-            <li>stay@getvahotel.com</li>
+            <li>zerutechane@gmail.com</li>
           </ul>
         </div>
         <div>
