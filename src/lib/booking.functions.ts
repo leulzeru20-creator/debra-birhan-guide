@@ -4,12 +4,12 @@ import { z } from "zod";
 const bookingSchema = z.object({
   name: z.string().trim().min(2, "Please enter your name").max(100),
   email: z.string().trim().email("Enter a valid email").max(255),
-  phone: z.string().trim().max(40).optional().default(""),
+  phone: z.string().trim().min(6, "Please enter your phone number").max(40),
   roomType: z.string().trim().min(1).max(80),
   checkIn: z.string().trim().regex(/^\d{4}-\d{2}-\d{2}$/, "Pick a check-in date"),
   checkOut: z.string().trim().regex(/^\d{4}-\d{2}-\d{2}$/, "Pick a check-out date"),
   guests: z.coerce.number().int().min(1).max(20),
-  message: z.string().trim().max(1000).optional().default(""),
+  message: z.string().trim().min(1, "Please add a short note").max(1000),
 });
 
 export type BookingInput = z.input<typeof bookingSchema>;
@@ -45,7 +45,7 @@ export const sendBookingRequest = createServerFn({ method: "POST" })
         <table cellpadding="0" cellspacing="0">
           ${row("Guest", data.name)}
           ${row("Email", data.email)}
-          ${row("Phone", data.phone || "—")}
+          ${row("Phone", data.phone)}
           ${row("Room type", data.roomType)}
           ${row("Check in", data.checkIn)}
           ${row("Check out", data.checkOut)}
@@ -63,7 +63,7 @@ export const sendBookingRequest = createServerFn({ method: "POST" })
       },
       body: JSON.stringify({
         from: "Getva Hotel Website <onboarding@resend.dev>",
-        to: ["stay@getvahotel.com"],
+        to: ["zerutechane@gmail.com"],
         reply_to: data.email,
         subject: `Booking request — ${data.roomType}, ${data.checkIn} to ${data.checkOut}`,
         html,
