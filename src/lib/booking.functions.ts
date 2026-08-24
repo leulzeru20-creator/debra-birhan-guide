@@ -9,7 +9,7 @@ const bookingSchema = z.object({
   checkIn: z.string().trim().regex(/^\d{4}-\d{2}-\d{2}$/, "Pick a check-in date"),
   checkOut: z.string().trim().regex(/^\d{4}-\d{2}-\d{2}$/, "Pick a check-out date"),
   guests: z.coerce.number().int().min(1).max(20),
-  message: z.string().trim().min(1, "Please add a short note").max(1000),
+  message: z.string().trim().max(1000).optional(),
 });
 
 export type BookingInput = z.input<typeof bookingSchema>;

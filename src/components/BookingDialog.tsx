@@ -207,13 +207,12 @@ export function BookingForm({
 
       <div>
         <label htmlFor="bf-message" className={labelClass}>
-          Anything else?
+          Anything else? <span className="text-earth/30">(optional)</span>
         </label>
         <textarea
           id="bf-message"
           name="message"
           rows={3}
-          required
           maxLength={1000}
           placeholder="Late arrival, extra bed, airport pickup…"
           className={inputClass}
