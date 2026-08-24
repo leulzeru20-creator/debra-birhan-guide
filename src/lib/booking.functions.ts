@@ -76,7 +76,9 @@ export const sendBookingRequest = createServerFn({ method: "POST" })
     if (!response.ok) {
       const body = await response.text();
       console.error(`Resend request failed [${response.status}]: ${body}`);
-      throw new Error(`Could not send your request [${response.status}].`);
+      throw new Error(
+        "We couldn't send your request right now. Please email zerutechane@gmail.com or call the front desk.",
+      );
     }
 
     return { sent: true } as const;
