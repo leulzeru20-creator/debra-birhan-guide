@@ -63,7 +63,10 @@ export const sendBookingRequest = createServerFn({ method: "POST" })
       },
       body: JSON.stringify({
         from: "Getva Hotel Website <onboarding@resend.dev>",
-        to: ["zerutechane@gmail.com"],
+        // Until a domain is verified at resend.com/domains, Resend only allows
+        // delivery to the account owner's address. Override with BOOKING_TO_EMAIL
+        // once a domain is verified (then this can be zerutechane@gmail.com).
+        to: [process.env["BOOKING_TO_EMAIL"] ?? "leulzeru20@gmail.com"],
         reply_to: data.email,
         subject: `Booking request — ${data.roomType}, ${data.checkIn} to ${data.checkOut}`,
         html,
@@ -73,7 +76,9 @@ export const sendBookingRequest = createServerFn({ method: "POST" })
     if (!response.ok) {
       const body = await response.text();
       console.error(`Resend request failed [${response.status}]: ${body}`);
-      throw new Error(`Could not send your request [${response.status}].`);
+      throw new Error(
+        "We couldn't send your request right now. Please email zerutechane@gmail.com or call the front desk.",
+      );
     }
 
     return { sent: true } as const;
