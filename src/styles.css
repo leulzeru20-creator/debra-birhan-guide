@@ -154,6 +154,15 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  section,
+  [id] {
+    scroll-margin-top: 5.5rem;
+  }
+
   * {
     border-color: var(--color-border);
   }
@@ -226,6 +235,34 @@
     letter-spacing: 0.2em;
   }
 
+  /* Scroll-triggered reveal — subtle fade + slide up */
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.55s ease-out,
+      transform 0.55s ease-out;
+    will-change: opacity, transform;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Contained image hover zoom */
+  .img-zoom {
+    overflow: hidden;
+  }
+
+  .img-zoom img {
+    transition: transform 0.5s ease;
+  }
+
+  .img-zoom:hover img {
+    transform: scale(1.05);
+  }
+
   .hero-headline {
     font-family: "Playfair Display", var(--font-serif);
     font-size: clamp(2.75rem, 6.5vw, 5.5rem);
@@ -249,6 +286,26 @@
   }
 
 
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .img-zoom img {
+    transition: none;
+  }
+
+  .img-zoom:hover img {
+    transform: none;
+  }
 }
 
 @font-face {

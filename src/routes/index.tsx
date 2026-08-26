@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useBooking, ROOM_TYPES } from "@/components/BookingDialog";
+import { Reveal } from "@/components/Reveal";
 
 function isoOffset(days: number) {
   const d = new Date();
@@ -119,7 +120,7 @@ function HomePage() {
           }}
         />
         <div className="section-container relative flex min-h-[88vh] items-center py-24">
-          <div className="max-w-2xl text-left">
+          <div className="max-w-2xl text-left animate-fade-in">
             <span className="text-label mb-4 block text-gold-light">
               Zerayakob Street · Debre Birhan
             </span>
@@ -142,191 +143,187 @@ function HomePage() {
       <section className="bg-earth py-20 text-warm-bg">
         <div className="section-container">
           <div className="grid gap-12 md:grid-cols-3">
-            <div className="space-y-4">
-              <div className="h-px w-12 bg-clay"></div>
-              <h3 className="text-xl font-serif">Food you'll actually finish</h3>
-              <p className="text-sm leading-relaxed text-warm-bg/70">
-                Injera and wot done properly, plus pasta and eggs for the mornings you want something plain. Breakfast comes with the room.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <div className="h-px w-12 bg-clay"></div>
-              <h3 className="text-xl font-serif">Room to work</h3>
-              <p className="text-sm leading-relaxed text-warm-bg/70">
-                WiFi in every room, plug points by the desk, and a conference hall big enough for the whole team when the meeting moves out of town.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <div className="h-px w-12 bg-clay"></div>
-              <h3 className="text-xl font-serif">Somewhere to sit outside</h3>
-              <p className="text-sm leading-relaxed text-warm-bg/70">
-                Wicker chairs under the trees, a shaded terrace, and a bamboo lounge for coffee when the afternoon cools down.
-              </p>
-            </div>
+            <Reveal>
+              <div className="space-y-4">
+                <div className="h-px w-12 bg-clay"></div>
+                <h3 className="text-xl font-serif">Food you'll actually finish</h3>
+                <p className="text-sm leading-relaxed text-warm-bg/70">
+                  Injera and wot done properly, plus pasta and eggs for the mornings you want something plain. Breakfast comes with the room.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={100}>
+              <div className="space-y-4">
+                <div className="h-px w-12 bg-clay"></div>
+                <h3 className="text-xl font-serif">Room to work</h3>
+                <p className="text-sm leading-relaxed text-warm-bg/70">
+                  WiFi in every room, plug points by the desk, and a conference hall big enough for the whole team when the meeting moves out of town.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={200}>
+              <div className="space-y-4">
+                <div className="h-px w-12 bg-clay"></div>
+                <h3 className="text-xl font-serif">Somewhere to sit outside</h3>
+                <p className="text-sm leading-relaxed text-warm-bg/70">
+                  Wicker chairs under the trees, a shaded terrace, and a bamboo lounge for coffee when the afternoon cools down.
+                </p>
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
 
       {/* Photo strip */}
       <section className="section-container py-24">
-        <div className="mb-12 max-w-xl">
-          <h2 className="text-4xl text-earth">Around the hotel</h2>
-          <p className="mt-2 text-earth/60">
-            {"\n"}
-          </p>
-        </div>
+        <Reveal>
+          <div className="mb-12 max-w-xl">
+            <h2 className="text-4xl text-earth">Around the hotel</h2>
+            <p className="mt-2 text-earth/60">
+              {"\n"}
+            </p>
+          </div>
+        </Reveal>
         <div className="grid gap-6 md:grid-cols-3">
-          <figure>
-            <img
-              src={garden}
-              alt="White wicker chairs and tables in the shaded garden at Getva Hotel"
-              loading="lazy"
-              className="aspect-[4/3] w-full rounded-sm object-cover"
-            />
-            <figcaption className="mt-3 text-sm text-earth/60">
-              The garden — the quietest corner on the property.
-            </figcaption>
-          </figure>
-          <figure>
-            <img
-              src={bambooLounge}
-              alt="Bamboo-clad lounge with arched windows and woven chairs at Getva Hotel"
-              loading="lazy"
-              className="aspect-[4/3] w-full rounded-sm object-cover"
-            />
-            <figcaption className="mt-3 text-sm text-earth/60">
-              The bamboo lounge, best in the late afternoon.
-            </figcaption>
-          </figure>
-          <figure>
-            <img
-              src={terrace}
-              alt="Covered outdoor terrace with tables and a woven mesob at Getva Hotel"
-              loading="lazy"
-              className="aspect-[4/3] w-full rounded-sm object-cover"
-            />
-            <figcaption className="mt-3 text-sm text-earth/60">
-              Covered terrace dining, rain or shine.
-            </figcaption>
-          </figure>
-          <figure>
-            <img
-              src={lobby}
-              alt="Getva Hotel lobby with tiled floor, plants and low armchairs under coloured lighting"
-              loading="lazy"
-              className="aspect-[4/3] w-full rounded-sm object-cover"
-            />
-            <figcaption className="mt-3 text-sm text-earth/60">
-              The lobby — check in, then sit a minute.
-            </figcaption>
-          </figure>
-          <figure>
-            <img
-              src={eventHall}
-              alt="Large hall at Getva Hotel set with rows of red and gold banquet chairs"
-              loading="lazy"
-              className="aspect-[4/3] w-full rounded-sm object-cover"
-            />
-            <figcaption className="mt-3 text-sm text-earth/60">
-              The big hall, ready for a hundred people.
-            </figcaption>
-          </figure>
-          <figure>
-            <img
-              src={hotelNight}
-              alt="Getva Hotel at night with its lit rooftop sign in Debre Birhan"
-              loading="lazy"
-              className="aspect-[4/3] w-full rounded-sm object-cover"
-            />
-            <figcaption className="mt-3 text-sm text-earth/60">
-              Easy to spot after dark — just follow the sign.
-            </figcaption>
-          </figure>
-          <figure>
-            <img
-              src={traditionalHall}
-              alt="Traditional interior hall with carved wooden chairs, woven wall panels and arched windows at Getva Hotel"
-              loading="lazy"
-              className="aspect-[4/3] w-full rounded-sm object-cover"
-            />
-            <figcaption className="mt-3 text-sm text-earth/60">
-              The traditional hall — coffee, conversation, and carved wood.
-            </figcaption>
-          </figure>
+          {[
+            {
+              src: garden,
+              alt: "White wicker chairs and tables in the shaded garden at Getva Hotel",
+              caption: "The garden — the quietest corner on the property.",
+            },
+            {
+              src: bambooLounge,
+              alt: "Bamboo-clad lounge with arched windows and woven chairs at Getva Hotel",
+              caption: "The bamboo lounge, best in the late afternoon.",
+            },
+            {
+              src: terrace,
+              alt: "Covered outdoor terrace with tables and a woven mesob at Getva Hotel",
+              caption: "Covered terrace dining, rain or shine.",
+            },
+            {
+              src: lobby,
+              alt: "Getva Hotel lobby with tiled floor, plants and low armchairs under coloured lighting",
+              caption: "The lobby — check in, then sit a minute.",
+            },
+            {
+              src: eventHall,
+              alt: "Large hall at Getva Hotel set with rows of red and gold banquet chairs",
+              caption: "The big hall, ready for a hundred people.",
+            },
+            {
+              src: hotelNight,
+              alt: "Getva Hotel at night with its lit rooftop sign in Debre Birhan",
+              caption: "Easy to spot after dark — just follow the sign.",
+            },
+            {
+              src: traditionalHall,
+              alt: "Traditional interior hall with carved wooden chairs, woven wall panels and arched windows at Getva Hotel",
+              caption: "The traditional hall — coffee, conversation, and carved wood.",
+            },
+          ].map((photo, i) => (
+            <Reveal key={photo.alt} delay={(i % 3) * 100}>
+              <figure>
+                <div className="img-zoom rounded-sm">
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    loading="lazy"
+                    className="aspect-[4/3] w-full object-cover"
+                  />
+                </div>
+                <figcaption className="mt-3 text-sm text-earth/60">
+                  {photo.caption}
+                </figcaption>
+              </figure>
+            </Reveal>
+          ))}
         </div>
       </section>
 
       {/* Rooms Preview */}
       <section className="section-container pb-24">
-        <div className="mb-12 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
-          <div>
-            <h2 className="text-4xl text-earth">Where you'll sleep</h2>
-            <p className="mt-2 text-earth/60">Fair prices, proper beds, hot water in the morning.</p>
+        <Reveal>
+          <div className="mb-12 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
+            <div>
+              <h2 className="text-4xl text-earth">Where you'll sleep</h2>
+              <p className="mt-2 text-earth/60">Fair prices, proper beds, hot water in the morning.</p>
+            </div>
+            <Link
+              to="/rooms"
+              className="border-b border-clay pb-1 text-sm font-semibold text-clay transition-colors hover:text-earth"
+            >
+              See all rooms
+            </Link>
           </div>
-          <Link
-            to="/rooms"
-            className="border-b border-clay pb-1 text-sm font-semibold text-clay transition-colors hover:text-earth"
-          >
-            See all rooms
-          </Link>
-        </div>
+        </Reveal>
 
         <div className="grid gap-10 md:grid-cols-2">
-          <Link to="/rooms" className="group block">
-            <img
-              src={guestRoom}
-              alt="Guest room bed at Getva Hotel made up with white linen and a gold runner"
-              loading="lazy"
-              className="mb-6 aspect-[4/3] w-full rounded-sm bg-stone-100 object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-            />
-            <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-start">
-              <div>
-                <h3 className="text-xl font-serif text-earth">Standard Room</h3>
-                <p className="text-sm text-earth/50">One big bed, one quiet night</p>
+          <Reveal>
+            <Link to="/rooms" className="group block">
+              <div className="img-zoom mb-6 rounded-sm">
+                <img
+                  src={guestRoom}
+                  alt="Guest room bed at Getva Hotel made up with white linen and a gold runner"
+                  loading="lazy"
+                  className="aspect-[4/3] w-full bg-stone-100 object-cover"
+                />
               </div>
-              <div className="text-left sm:text-right">
-                <p className="text-sm font-semibold text-clay">From $45 / night</p>
-                <p className="text-label text-earth/40">Breakfast included</p>
+              <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-start">
+                <div>
+                  <h3 className="text-xl font-serif text-earth">Standard Room</h3>
+                  <p className="text-sm text-earth/50">One big bed, one quiet night</p>
+                </div>
+                <div className="text-left sm:text-right">
+                  <p className="text-sm font-semibold text-clay">From $45 / night</p>
+                  <p className="text-label text-earth/40">Breakfast included</p>
+                </div>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </Reveal>
 
-          <Link to="/rooms" className="group block">
-            <img
-              src={conference}
-              alt="Long polished conference table with leather chairs and a projector screen at Getva Hotel"
-              loading="lazy"
-              className="mb-6 aspect-[4/3] w-full rounded-sm bg-stone-100 object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-            />
-            <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-start">
-              <div>
-                <h3 className="text-xl font-serif text-earth">Conference Hall</h3>
-                <p className="text-sm text-earth/50">Seats 40+, projector and mics ready</p>
+          <Reveal delay={120}>
+            <Link to="/rooms" className="group block">
+              <div className="img-zoom mb-6 rounded-sm">
+                <img
+                  src={conference}
+                  alt="Long polished conference table with leather chairs and a projector screen at Getva Hotel"
+                  loading="lazy"
+                  className="aspect-[4/3] w-full bg-stone-100 object-cover"
+                />
               </div>
-              <div className="text-left sm:text-right">
-                <p className="text-sm font-semibold text-clay">Ask for day rates</p>
-                <p className="text-label text-earth/40">Catering available</p>
+              <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-start">
+                <div>
+                  <h3 className="text-xl font-serif text-earth">Conference Hall</h3>
+                  <p className="text-sm text-earth/50">Seats 40+, projector and mics ready</p>
+                </div>
+                <div className="text-left sm:text-right">
+                  <p className="text-sm font-semibold text-clay">Ask for day rates</p>
+                  <p className="text-label text-earth/40">Catering available</p>
+                </div>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </Reveal>
         </div>
       </section>
 
       {/* Trust Banner — deep highland block for contrast */}
       <section className="mb-24 px-8">
-        <div className="section-container bg-highland p-12 text-center text-warm-bg">
-          <h2 className="mb-8 text-sm font-medium uppercase tracking-[0.3em] text-warm-bg/50">
-            What comes with the room
-          </h2>
-          <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
-            {["Free Parking", "WiFi Throughout", "Gym & Playground", "Restaurant & Bar"].map((item) => (
-              <div key={item} className="flex flex-col items-center">
-                <div className="mb-3 size-8 rounded-full border border-gold/60"></div>
-                <span className="text-[10px] font-bold uppercase tracking-tighter">{item}</span>
-              </div>
-            ))}
+        <Reveal>
+          <div className="section-container bg-highland p-12 text-center text-warm-bg">
+            <h2 className="mb-8 text-sm font-medium uppercase tracking-[0.3em] text-warm-bg/50">
+              What comes with the room
+            </h2>
+            <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+              {["Free Parking", "WiFi Throughout", "Gym & Playground", "Restaurant & Bar"].map((item) => (
+                <div key={item} className="flex flex-col items-center">
+                  <div className="mb-3 size-8 rounded-full border border-gold/60"></div>
+                  <span className="text-[10px] font-bold uppercase tracking-tighter">{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
     </>
