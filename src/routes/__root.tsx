@@ -139,45 +139,116 @@ function RootShell({ children }: { children: ReactNode }) {
 }
 
 function Header() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
   return (
-    <nav className="sticky top-0 z-50 flex items-center justify-between border-b border-earth/10 bg-warm-bg/50 px-8 py-6 backdrop-blur-md">
-      <Link
-        to="/"
-        className="font-serif text-2xl font-semibold tracking-tight text-clay"
-      >
-        GETVA HOTEL
-      </Link>
-      <div className="hidden items-center gap-8 text-sm font-medium uppercase tracking-wider md:flex">
+    <nav className="sticky top-0 z-50 border-b border-earth/10 bg-warm-bg/50 backdrop-blur-md">
+      <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-5 md:flex md:justify-between md:px-8 md:py-6">
         <Link
-          to="/rooms"
-          activeProps={{ className: "text-clay" }}
-          className="text-earth transition-colors hover:text-clay"
+          to="/"
+          className="font-serif text-xl font-semibold tracking-tight text-clay md:text-2xl"
         >
-          Rooms
+          GETVA HOTEL
         </Link>
-        <Link
-          to="/dining"
-          activeProps={{ className: "text-clay" }}
-          className="text-earth transition-colors hover:text-clay"
+
+        <div className="hidden items-center gap-8 text-sm font-medium uppercase tracking-wider md:flex">
+          <Link
+            to="/rooms"
+            activeProps={{ className: "text-clay" }}
+            className="text-earth transition-colors hover:text-clay"
+          >
+            Rooms
+          </Link>
+          <Link
+            to="/dining"
+            activeProps={{ className: "text-clay" }}
+            className="text-earth transition-colors hover:text-clay"
+          >
+            Dining
+          </Link>
+          <Link
+            to="/location"
+            activeProps={{ className: "text-clay" }}
+            className="text-earth transition-colors hover:text-clay"
+          >
+            Location
+          </Link>
+          <Link
+            to="/contact"
+            activeProps={{ className: "text-clay" }}
+            className="text-earth transition-colors hover:text-clay"
+          >
+            Contact
+          </Link>
+        </div>
+
+        <div className="hidden md:block">
+          <BookNowButton />
+        </div>
+
+        <button
+          type="button"
+          aria-label="Open menu"
+          aria-expanded={mobileOpen}
+          onClick={() => setMobileOpen((open) => !open)}
+          className="grid h-10 w-10 place-items-center rounded-sm border border-earth/10 text-earth md:hidden"
         >
-          Dining
-        </Link>
-        <Link
-          to="/location"
-          activeProps={{ className: "text-clay" }}
-          className="text-earth transition-colors hover:text-clay"
-        >
-          Location
-        </Link>
-        <Link
-          to="/contact"
-          activeProps={{ className: "text-clay" }}
-          className="text-earth transition-colors hover:text-clay"
-        >
-          Contact
-        </Link>
+          <svg
+            width="20"
+            height="14"
+            viewBox="0 0 20 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path
+              d="M0 1h20M0 7h20M0 13h20"
+              stroke="currentColor"
+              strokeWidth="1.5"
+            />
+          </svg>
+        </button>
       </div>
-      <BookNowButton />
+
+      {mobileOpen && (
+        <div className="border-t border-earth/10 bg-warm-bg/95 px-6 py-6 backdrop-blur-md md:hidden">
+          <div className="flex flex-col gap-4 text-sm font-medium uppercase tracking-wider">
+            <BookNowButton />
+            <Link
+              to="/rooms"
+              activeProps={{ className: "text-clay" }}
+              className="text-earth transition-colors hover:text-clay"
+              onClick={() => setMobileOpen(false)}
+            >
+              Rooms
+            </Link>
+            <Link
+              to="/dining"
+              activeProps={{ className: "text-clay" }}
+              className="text-earth transition-colors hover:text-clay"
+              onClick={() => setMobileOpen(false)}
+            >
+              Dining
+            </Link>
+            <Link
+              to="/location"
+              activeProps={{ className: "text-clay" }}
+              className="text-earth transition-colors hover:text-clay"
+              onClick={() => setMobileOpen(false)}
+            >
+              Location
+            </Link>
+            <Link
+              to="/contact"
+              activeProps={{ className: "text-clay" }}
+              className="text-earth transition-colors hover:text-clay"
+              onClick={() => setMobileOpen(false)}
+            >
+              Contact
+            </Link>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
