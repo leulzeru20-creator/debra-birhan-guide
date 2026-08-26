@@ -71,7 +71,7 @@ function HeroBookingWidget() {
         onClick={() => openBooking({ checkIn, checkOut, roomType })}
         className="btn-primary flex-shrink-0"
       >
-        Check Availability
+        Book a Room
       </button>
     </div>
   );
